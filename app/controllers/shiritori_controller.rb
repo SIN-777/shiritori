@@ -1,0 +1,2 @@
+class ShiritoriController < ApplicationController
+end
