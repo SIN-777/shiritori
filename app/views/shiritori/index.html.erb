@@ -1,1 +1,17 @@
-test!
+<% if flash[:ng_message] %>
+  <div style="color:#FF0000"><%= flash[:ng_message] %></div>
+<% end %>
+
+<% if @question %>
+  問題：<%= @question %>
+  <hr />
+<% end %>
+
+
+<% form_tag :action => :index do %>
+  <%= text_field_tag :answer, params[:answer] %><br />
+  <%= hidden_field_tag :question, @question if @question %><br />
+  <%= submit_tag "回答" %>
+<% end %>
+
+

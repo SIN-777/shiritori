@@ -604,3 +604,1554 @@ RuntimeError (hoge):
 Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.5ms)
 Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.5ms)
 Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Oct 08 19:54:03 +0900 2010
+  Processing by TopController#index as HTML
+Rendered top/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 23ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/top/hoge" for 127.0.0.1 at Fri Oct 08 19:54:18 +0900 2010
+  Processing by TopController#hoge as HTML
+Completed   in 1ms
+
+RuntimeError (hoge):
+  app/controllers/top_controller.rb:4:in `hoge'
+
+Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.3ms)
+Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (37.2ms)
+
+
+Started GET "/top/hoge" for 127.0.0.1 at Fri Oct 08 19:55:20 +0900 2010
+  Processing by TopController#hoge as HTML
+Rendered top/hoge.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Oct 08 19:55:23 +0900 2010
+  Processing by TopController#index as HTML
+Rendered top/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 9ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shiritori" for 127.0.0.1 at Fri Oct 08 19:55:24 +0900 2010
+  Processing by ShiritoriController#index as HTML
+Rendered shiritori/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 40ms (Views: 39.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shiritori" for 127.0.0.1 at Fri Oct 08 19:58:12 +0900 2010
+  Processing by ShiritoriController#index as HTML
+ERROR: compiling _app_views_shiritori_index_html_erb__659089341__613192778_0 RAISED compile error
+/home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:6: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _app_views_shiritori_index_html_erb__659089341__613192778_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "shiritori/index";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new; form_for 
+ end 
+@output_buffer.safe_concat('
+
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:6:in `compile'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/template.rb:134:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:54:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/template.rb:127:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:59:in `_render_template'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:56:in `_render_template'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:26:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:92:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:17:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:150:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:435:in `_run__8932432__process_action__199225275__callbacks'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:409:in `send'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:93:in `send'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:119:in `process'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:40:in `process'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal.rb:133:in `dispatch'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal.rb:173:in `action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `recognize'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/cookies.rb:287:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:32:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:12:in `cache'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:31:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/rack/logger.rb:13:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/lock.rb:11:in `synchronize'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/application.rb:168:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/application.rb:77:in `send'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/application.rb:77:in `method_missing'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/handler/webrick.rb:13:in `run'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/server.rb:213:in `start'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/commands/server.rb:65:in `start'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/commands.rb:30
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/commands.rb:27:in `tap'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered shiritori/index.html.erb within layouts/application (30.9ms)
+Completed   in 53ms
+
+ActionView::Template::Error (compile error
+/home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:6: syntax error, unexpected kENSURE, expecting $end):
+0  app/views/shiritori/index.html.erb:6:in `compile'
+
+Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.5ms)
+Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (159.3ms)
+Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (186.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Oct 08 19:58:16 +0900 2010
+  Processing by TopController#index as HTML
+Rendered top/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shiritori" for 127.0.0.1 at Fri Oct 08 20:00:10 +0900 2010
+  Processing by ShiritoriController#index as HTML
+ERROR: compiling _app_views_shiritori_index_html_erb__659089341__612713558_0 RAISED compile error
+/home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _app_views_shiritori_index_html_erb__659089341__612713558_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "shiritori/index";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('
+'); form_tag 
+ end 
+@output_buffer.safe_concat('
+
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7:in `compile'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/template.rb:134:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:54:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/template.rb:127:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:59:in `_render_template'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:56:in `_render_template'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:26:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:92:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:17:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:150:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:435:in `_run__8932432__process_action__199225275__callbacks'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:409:in `send'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:93:in `send'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:119:in `process'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:40:in `process'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal.rb:133:in `dispatch'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal.rb:173:in `action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `recognize'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/cookies.rb:287:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:32:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:12:in `cache'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:31:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/rack/logger.rb:13:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/lock.rb:11:in `synchronize'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/application.rb:168:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/application.rb:77:in `send'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/application.rb:77:in `method_missing'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/handler/webrick.rb:13:in `run'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/server.rb:213:in `start'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/commands/server.rb:65:in `start'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/commands.rb:30
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/commands.rb:27:in `tap'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered shiritori/index.html.erb within layouts/application (0.7ms)
+Completed   in 5ms
+
+ActionView::Template::Error (compile error
+/home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7: syntax error, unexpected kENSURE, expecting $end):
+0  app/views/shiritori/index.html.erb:7:in `compile'
+
+Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.1ms)
+Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.1ms)
+
+
+Started GET "/shiritori" for 127.0.0.1 at Fri Oct 08 20:00:11 +0900 2010
+  Processing by ShiritoriController#index as HTML
+ERROR: compiling _app_views_shiritori_index_html_erb__659089341__613113568_0 RAISED compile error
+/home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _app_views_shiritori_index_html_erb__659089341__613113568_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "shiritori/index";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('
+'); form_tag 
+ end 
+@output_buffer.safe_concat('
+
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7:in `compile'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/template.rb:134:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:54:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/template.rb:127:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:59:in `_render_template'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:56:in `_render_template'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:26:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:92:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:17:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:150:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:435:in `_run__8932432__process_action__199225275__callbacks'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:409:in `send'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:93:in `send'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:119:in `process'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:40:in `process'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal.rb:133:in `dispatch'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal.rb:173:in `action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `recognize'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/cookies.rb:287:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:32:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:12:in `cache'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:31:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/rack/logger.rb:13:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/lock.rb:11:in `synchronize'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/application.rb:168:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/application.rb:77:in `send'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/application.rb:77:in `method_missing'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/handler/webrick.rb:13:in `run'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/server.rb:213:in `start'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/commands/server.rb:65:in `start'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/commands.rb:30
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/commands.rb:27:in `tap'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered shiritori/index.html.erb within layouts/application (9.9ms)
+Completed   in 28ms
+
+ActionView::Template::Error (compile error
+/home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7: syntax error, unexpected kENSURE, expecting $end):
+0  app/views/shiritori/index.html.erb:7:in `compile'
+
+Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.3ms)
+Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.1ms)
+Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (28.2ms)
+
+
+Started GET "/shiritori" for 127.0.0.1 at Fri Oct 08 20:00:12 +0900 2010
+  Processing by ShiritoriController#index as HTML
+ERROR: compiling _app_views_shiritori_index_html_erb__659089341__613479898_0 RAISED compile error
+/home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _app_views_shiritori_index_html_erb__659089341__613479898_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "shiritori/index";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('
+'); form_tag 
+ end 
+@output_buffer.safe_concat('
+
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7:in `compile'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/template.rb:134:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:54:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/template.rb:127:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:59:in `_render_template'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:56:in `_render_template'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:26:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:92:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:17:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:150:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:435:in `_run__8932432__process_action__199225275__callbacks'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:409:in `send'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:93:in `send'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:119:in `process'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:40:in `process'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal.rb:133:in `dispatch'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal.rb:173:in `action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `recognize'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/cookies.rb:287:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:32:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:12:in `cache'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:31:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/rack/logger.rb:13:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/lock.rb:11:in `synchronize'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/application.rb:168:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/application.rb:77:in `send'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/application.rb:77:in `method_missing'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/handler/webrick.rb:13:in `run'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/server.rb:213:in `start'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/commands/server.rb:65:in `start'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/commands.rb:30
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/commands.rb:27:in `tap'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered shiritori/index.html.erb within layouts/application (0.7ms)
+Completed   in 6ms
+
+ActionView::Template::Error (compile error
+/home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7: syntax error, unexpected kENSURE, expecting $end):
+0  app/views/shiritori/index.html.erb:7:in `compile'
+
+Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.1ms)
+Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.5ms)
+
+
+Started GET "/shiritori" for 127.0.0.1 at Fri Oct 08 20:00:13 +0900 2010
+  Processing by ShiritoriController#index as HTML
+ERROR: compiling _app_views_shiritori_index_html_erb__659089341__612483788_0 RAISED compile error
+/home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _app_views_shiritori_index_html_erb__659089341__612483788_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "shiritori/index";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('
+'); form_tag 
+ end 
+@output_buffer.safe_concat('
+
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7:in `compile'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/template.rb:134:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:54:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/template.rb:127:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:59:in `_render_template'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:56:in `_render_template'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:26:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:92:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:17:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:150:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:435:in `_run__8932432__process_action__199225275__callbacks'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:409:in `send'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:93:in `send'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:119:in `process'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:40:in `process'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal.rb:133:in `dispatch'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal.rb:173:in `action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `recognize'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/cookies.rb:287:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:32:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:12:in `cache'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:31:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/rack/logger.rb:13:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/lock.rb:11:in `synchronize'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/application.rb:168:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/application.rb:77:in `send'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/application.rb:77:in `method_missing'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/handler/webrick.rb:13:in `run'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/server.rb:213:in `start'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/commands/server.rb:65:in `start'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/commands.rb:30
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/commands.rb:27:in `tap'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered shiritori/index.html.erb within layouts/application (0.8ms)
+Completed   in 5ms
+
+ActionView::Template::Error (compile error
+/home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7: syntax error, unexpected kENSURE, expecting $end):
+0  app/views/shiritori/index.html.erb:7:in `compile'
+
+Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.8ms)
+Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.2ms)
+
+
+Started GET "/shiritori" for 127.0.0.1 at Fri Oct 08 20:01:14 +0900 2010
+  Processing by ShiritoriController#index as HTML
+ERROR: compiling _app_views_shiritori_index_html_erb__659089341__612890078_0 RAISED compile error
+/home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:3: syntax error, unexpected ':', expecting ']'
+...field_tag :word, params[:word: );@output_buffer.safe_concat(...
+                              ^
+/home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:5: syntax error, unexpected kEND, expecting ')'
+'); end 
+       ^
+/home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:9: syntax error, unexpected kENSURE, expecting ')'
+/home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:11: syntax error, unexpected kEND, expecting ')'
+Function body:           def _app_views_shiritori_index_html_erb__659089341__612890078_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "shiritori/index";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('
+');@output_buffer.append_if_string=  form_tag :action => :index do 
+@output_buffer.safe_concat('  ');@output_buffer.append= ( text_field_tag :word, params[:word: );@output_buffer.safe_concat('<br />
+  ');@output_buffer.append= ( submit_tag "送信" );@output_buffer.safe_concat('
+'); end 
+@output_buffer.safe_concat('
+
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:11:in `compile'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/template.rb:134:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:54:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/template.rb:127:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:59:in `_render_template'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:56:in `_render_template'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:26:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:92:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:17:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:150:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:435:in `_run__8932432__process_action__199225275__callbacks'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:409:in `send'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:93:in `send'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:119:in `process'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:40:in `process'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal.rb:133:in `dispatch'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal.rb:173:in `action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `recognize'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/cookies.rb:287:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:32:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:12:in `cache'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:31:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/rack/logger.rb:13:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/lock.rb:11:in `synchronize'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/application.rb:168:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/application.rb:77:in `send'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/application.rb:77:in `method_missing'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/handler/webrick.rb:13:in `run'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/server.rb:213:in `start'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/commands/server.rb:65:in `start'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/commands.rb:30
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/commands.rb:27:in `tap'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered shiritori/index.html.erb within layouts/application (1.0ms)
+Completed   in 6ms
+
+ActionView::Template::Error (compile error
+/home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:3: syntax error, unexpected ':', expecting ']'
+...field_tag :word, params[:word: );@output_buffer.safe_concat(...
+                              ^
+/home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:5: syntax error, unexpected kEND, expecting ')'
+'); end 
+       ^
+/home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:9: syntax error, unexpected kENSURE, expecting ')'
+/home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:11: syntax error, unexpected kEND, expecting ')'):
+    1: 
+    2: <% form_tag :action => :index do %>
+    3:   <%= text_field_tag :word, params[:word: %><br />
+    4:   <%= submit_tag "送信" %>
+    5: <% end %>
+  app/views/shiritori/index.html.erb:11:in `compile'
+
+Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.1ms)
+Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.8ms)
+
+
+Started GET "/shiritori" for 127.0.0.1 at Fri Oct 08 20:01:15 +0900 2010
+  Processing by ShiritoriController#index as HTML
+ERROR: compiling _app_views_shiritori_index_html_erb__659089341__613299908_0 RAISED compile error
+/home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:3: syntax error, unexpected ':', expecting ']'
+...field_tag :word, params[:word: );@output_buffer.safe_concat(...
+                              ^
+/home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:5: syntax error, unexpected kEND, expecting ')'
+'); end 
+       ^
+/home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:9: syntax error, unexpected kENSURE, expecting ')'
+/home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:11: syntax error, unexpected kEND, expecting ')'
+Function body:           def _app_views_shiritori_index_html_erb__659089341__613299908_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "shiritori/index";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('
+');@output_buffer.append_if_string=  form_tag :action => :index do 
+@output_buffer.safe_concat('  ');@output_buffer.append= ( text_field_tag :word, params[:word: );@output_buffer.safe_concat('<br />
+  ');@output_buffer.append= ( submit_tag "送信" );@output_buffer.safe_concat('
+'); end 
+@output_buffer.safe_concat('
+
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:11:in `compile'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/template.rb:134:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:54:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/template.rb:127:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:59:in `_render_template'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:56:in `_render_template'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:26:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:92:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:17:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:150:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:435:in `_run__8932432__process_action__199225275__callbacks'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:409:in `send'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:93:in `send'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:119:in `process'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:40:in `process'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal.rb:133:in `dispatch'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal.rb:173:in `action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `recognize'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/cookies.rb:287:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:32:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:12:in `cache'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:31:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/rack/logger.rb:13:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/lock.rb:11:in `synchronize'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/application.rb:168:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/application.rb:77:in `send'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/application.rb:77:in `method_missing'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/handler/webrick.rb:13:in `run'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/server.rb:213:in `start'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/commands/server.rb:65:in `start'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/commands.rb:30
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/commands.rb:27:in `tap'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered shiritori/index.html.erb within layouts/application (2.4ms)
+Completed   in 38ms
+
+ActionView::Template::Error (compile error
+/home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:3: syntax error, unexpected ':', expecting ']'
+...field_tag :word, params[:word: );@output_buffer.safe_concat(...
+                              ^
+/home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:5: syntax error, unexpected kEND, expecting ')'
+'); end 
+       ^
+/home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:9: syntax error, unexpected kENSURE, expecting ')'
+/home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:11: syntax error, unexpected kEND, expecting ')'):
+    1: 
+    2: <% form_tag :action => :index do %>
+    3:   <%= text_field_tag :word, params[:word: %><br />
+    4:   <%= submit_tag "送信" %>
+    5: <% end %>
+  app/views/shiritori/index.html.erb:11:in `compile'
+
+Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.5ms)
+
+
+Started GET "/shiritori" for 127.0.0.1 at Fri Oct 08 20:01:23 +0900 2010
+  Processing by ShiritoriController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__613647368_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:2)
+Rendered shiritori/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shiritori" for 127.0.0.1 at Fri Oct 08 20:01:23 +0900 2010
+  Processing by ShiritoriController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__612552378_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:2)
+Rendered shiritori/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shiritori" for 127.0.0.1 at Fri Oct 08 20:01:26 +0900 2010
+  Processing by ShiritoriController#index as HTML
+  Parameters: {"commit"=>"送信", "word"=>"aaa", "authenticity_token"=>"T4rzZBQeVmLposOMef1Ya5l6ynGHCDU9TToy/KH49lU=", "utf8"=>"✓"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__612816758_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:2)
+Rendered shiritori/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 19ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shiritori" for 127.0.0.1 at Fri Oct 08 20:01:30 +0900 2010
+  Processing by ShiritoriController#index as HTML
+  Parameters: {"commit"=>"送信", "word"=>"あああああ", "authenticity_token"=>"T4rzZBQeVmLposOMef1Ya5l6ynGHCDU9TToy/KH49lU=", "utf8"=>"✓"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__613012918_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:2)
+Rendered shiritori/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shiritori" for 127.0.0.1 at Fri Oct 08 20:01:31 +0900 2010
+  Processing by ShiritoriController#index as HTML
+  Parameters: {"commit"=>"送信", "word"=>"あああああ", "authenticity_token"=>"T4rzZBQeVmLposOMef1Ya5l6ynGHCDU9TToy/KH49lU=", "utf8"=>"✓"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__613193888_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:2)
+Rendered shiritori/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shiritori" for 127.0.0.1 at Fri Oct 08 20:01:31 +0900 2010
+  Processing by ShiritoriController#index as HTML
+  Parameters: {"commit"=>"送信", "word"=>"あああああ", "authenticity_token"=>"T4rzZBQeVmLposOMef1Ya5l6ynGHCDU9TToy/KH49lU=", "utf8"=>"✓"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__613347808_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:2)
+Rendered shiritori/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shiritori" for 127.0.0.1 at Fri Oct 08 20:04:28 +0900 2010
+  Processing by ShiritoriController#index as HTML
+  Parameters: {"commit"=>"送信", "word"=>"あああああ", "authenticity_token"=>"T4rzZBQeVmLposOMef1Ya5l6ynGHCDU9TToy/KH49lU=", "utf8"=>"✓"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__612465248_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7)
+Rendered shiritori/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shiritori" for 127.0.0.1 at Fri Oct 08 20:04:30 +0900 2010
+  Processing by ShiritoriController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__612745628_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7)
+Rendered shiritori/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shiritori" for 127.0.0.1 at Fri Oct 08 20:04:32 +0900 2010
+  Processing by ShiritoriController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__613013538_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7)
+Rendered shiritori/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Oct 08 20:06:43 +0900 2010
+  Processing by TopController#index as HTML
+Rendered top/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Oct 08 20:06:44 +0900 2010
+  Processing by TopController#index as HTML
+Rendered top/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shiritori" for 127.0.0.1 at Fri Oct 08 20:06:46 +0900 2010
+  Processing by ShiritoriController#index as HTML
+Completed   in 1ms
+
+NoMethodError (private method `rand' called for #<Array:0xb6f07038>):
+  app/controllers/shiritori_controller.rb:8:in `get_first_question'
+  app/controllers/shiritori_controller.rb:21:in `index'
+
+Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.2ms)
+Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.9ms)
+
+
+Started GET "/shiritori" for 127.0.0.1 at Fri Oct 08 20:08:08 +0900 2010
+  Processing by ShiritoriController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__613288468_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7)
+Rendered shiritori/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shiritori" for 127.0.0.1 at Fri Oct 08 20:08:09 +0900 2010
+  Processing by ShiritoriController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__612482538_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7)
+Rendered shiritori/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shiritori" for 127.0.0.1 at Fri Oct 08 20:08:37 +0900 2010
+  Processing by ShiritoriController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__612768558_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7)
+Rendered shiritori/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shiritori" for 127.0.0.1 at Fri Oct 08 20:08:38 +0900 2010
+  Processing by ShiritoriController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__613042558_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7)
+Rendered shiritori/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shiritori" for 127.0.0.1 at Fri Oct 08 20:08:38 +0900 2010
+  Processing by ShiritoriController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__612463218_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7)
+Rendered shiritori/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shiritori" for 127.0.0.1 at Fri Oct 08 20:08:38 +0900 2010
+  Processing by ShiritoriController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__612747338_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7)
+Rendered shiritori/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shiritori" for 127.0.0.1 at Fri Oct 08 20:08:54 +0900 2010
+  Processing by ShiritoriController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__613037128_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7)
+Rendered shiritori/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shiritori" for 127.0.0.1 at Fri Oct 08 20:08:55 +0900 2010
+  Processing by ShiritoriController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__612455838_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7)
+Rendered shiritori/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shiritori" for 127.0.0.1 at Fri Oct 08 20:08:55 +0900 2010
+  Processing by ShiritoriController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__612740448_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7)
+Rendered shiritori/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shiritori" for 127.0.0.1 at Fri Oct 08 20:08:56 +0900 2010
+  Processing by ShiritoriController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__613034988_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7)
+Rendered shiritori/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shiritori" for 127.0.0.1 at Fri Oct 08 20:08:56 +0900 2010
+  Processing by ShiritoriController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__612448808_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7)
+Rendered shiritori/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shiritori" for 127.0.0.1 at Fri Oct 08 20:10:11 +0900 2010
+  Processing by ShiritoriController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__612745828_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7)
+Rendered shiritori/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shiritori" for 127.0.0.1 at Fri Oct 08 20:10:12 +0900 2010
+  Processing by ShiritoriController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__613041498_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7)
+Rendered shiritori/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shiritori" for 127.0.0.1 at Fri Oct 08 20:10:13 +0900 2010
+  Processing by ShiritoriController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__612440628_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7)
+Rendered shiritori/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shiritori" for 127.0.0.1 at Fri Oct 08 20:10:13 +0900 2010
+  Processing by ShiritoriController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__612719108_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7)
+Rendered shiritori/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shiritori" for 127.0.0.1 at Fri Oct 08 20:11:30 +0900 2010
+  Processing by ShiritoriController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__613029868_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7)
+Rendered shiritori/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shiritori" for 127.0.0.1 at Fri Oct 08 20:11:32 +0900 2010
+  Processing by ShiritoriController#index as HTML
+  Parameters: {"commit"=>"回答", "word"=>"ああ", "authenticity_token"=>"T4rzZBQeVmLposOMef1Ya5l6ynGHCDU9TToy/KH49lU=", "utf8"=>"✓"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__612440138_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7)
+Rendered shiritori/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Oct 08 20:13:16 +0900 2010
+  Processing by TopController#index as HTML
+Rendered top/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shiritori" for 127.0.0.1 at Fri Oct 08 20:13:17 +0900 2010
+  Processing by ShiritoriController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__612808698_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7)
+Rendered shiritori/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shiritori" for 127.0.0.1 at Fri Oct 08 20:13:32 +0900 2010
+  Processing by ShiritoriController#index as HTML
+  Parameters: {"commit"=>"回答", "authenticity_token"=>"T4rzZBQeVmLposOMef1Ya5l6ynGHCDU9TToy/KH49lU=", "utf8"=>"✓", "question"=>"attr_internal_writer", "answer"=>"aaa"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__613014688_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7)
+Rendered shiritori/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Oct 08 20:20:12 +0900 2010
+  Processing by TopController#index as HTML
+Rendered top/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shiritori" for 127.0.0.1 at Fri Oct 08 20:20:13 +0900 2010
+  Processing by ShiritoriController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__613439158_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7)
+Rendered shiritori/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 37ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shiritori" for 127.0.0.1 at Fri Oct 08 20:20:14 +0900 2010
+  Processing by ShiritoriController#index as HTML
+  Parameters: {"commit"=>"回答", "authenticity_token"=>"T4rzZBQeVmLposOMef1Ya5l6ynGHCDU9TToy/KH49lU=", "utf8"=>"✓", "question"=>"as_json", "answer"=>""}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__613578638_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7)
+Rendered shiritori/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shiritori" for 127.0.0.1 at Fri Oct 08 20:20:15 +0900 2010
+  Processing by ShiritoriController#index as HTML
+  Parameters: {"commit"=>"回答", "authenticity_token"=>"T4rzZBQeVmLposOMef1Ya5l6ynGHCDU9TToy/KH49lU=", "utf8"=>"✓", "question"=>"as_json", "answer"=>""}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__612539478_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7)
+Rendered shiritori/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shiritori" for 127.0.0.1 at Fri Oct 08 20:20:18 +0900 2010
+  Processing by ShiritoriController#index as HTML
+  Parameters: {"commit"=>"回答", "authenticity_token"=>"T4rzZBQeVmLposOMef1Ya5l6ynGHCDU9TToy/KH49lU=", "utf8"=>"✓", "question"=>"as_json", "answer"=>"none"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__612726228_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7)
+Rendered shiritori/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 31ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shiritori" for 127.0.0.1 at Fri Oct 08 20:20:19 +0900 2010
+  Processing by ShiritoriController#index as HTML
+  Parameters: {"commit"=>"回答", "authenticity_token"=>"T4rzZBQeVmLposOMef1Ya5l6ynGHCDU9TToy/KH49lU=", "utf8"=>"✓", "question"=>"as_json", "answer"=>"none"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__612900108_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7)
+Rendered shiritori/index.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 102ms (Views: 99.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shiritori" for 127.0.0.1 at Fri Oct 08 20:20:19 +0900 2010
+  Processing by ShiritoriController#index as HTML
+  Parameters: {"commit"=>"回答", "authenticity_token"=>"T4rzZBQeVmLposOMef1Ya5l6ynGHCDU9TToy/KH49lU=", "utf8"=>"✓", "question"=>"as_json", "answer"=>"none"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__613101298_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7)
+Rendered shiritori/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shiritori" for 127.0.0.1 at Fri Oct 08 20:20:19 +0900 2010
+  Processing by ShiritoriController#index as HTML
+  Parameters: {"commit"=>"回答", "authenticity_token"=>"T4rzZBQeVmLposOMef1Ya5l6ynGHCDU9TToy/KH49lU=", "utf8"=>"✓", "question"=>"as_json", "answer"=>"none"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__613286178_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:7)
+Rendered shiritori/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shiritori" for 127.0.0.1 at Fri Oct 08 20:21:04 +0900 2010
+  Processing by ShiritoriController#index as HTML
+  Parameters: {"commit"=>"回答", "authenticity_token"=>"T4rzZBQeVmLposOMef1Ya5l6ynGHCDU9TToy/KH49lU=", "utf8"=>"✓", "question"=>"as_json", "answer"=>"none"}
+ERROR: compiling _app_views_shiritori_index_html_erb__659089341__613451108_0 RAISED compile error
+/home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:19: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _app_views_shiritori_index_html_erb__659089341__613451108_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "shiritori/index";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new; if flash[:ng_message] 
+@output_buffer.safe_concat('  <div style="color:#FF0000">');@output_buffer.append= ( flash[:ng_message] ); end ;@output_buffer.safe_concat('
+'); end 
+@output_buffer.safe_concat('
+'); if @question 
+@output_buffer.safe_concat('  問題：');@output_buffer.append= ( @question );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <hr />
+'); end 
+@output_buffer.safe_concat('
+
+');@output_buffer.append_if_string=  form_tag :action => :index do 
+@output_buffer.safe_concat('  ');@output_buffer.append= ( text_field_tag :answer, params[:answer] );@output_buffer.safe_concat('<br />
+  ');@output_buffer.append= ( hidden_field_tag :question, @question if @question );@output_buffer.safe_concat('<br />
+  ');@output_buffer.append= ( submit_tag "回答" );@output_buffer.safe_concat('
+'); end 
+@output_buffer.safe_concat('
+
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:19:in `compile'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/template.rb:134:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:54:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/template.rb:127:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:59:in `_render_template'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:56:in `_render_template'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:26:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:92:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:17:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:150:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:435:in `_run__8932432__process_action__199225275__callbacks'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:409:in `send'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:93:in `send'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:119:in `process'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:40:in `process'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal.rb:133:in `dispatch'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_controller/metal.rb:173:in `action'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `recognize'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/cookies.rb:287:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:32:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:12:in `cache'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:31:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/rack/logger.rb:13:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/lock.rb:11:in `synchronize'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/application.rb:168:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/application.rb:77:in `send'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/application.rb:77:in `method_missing'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/home/zizo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/handler/webrick.rb:13:in `run'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/server.rb:213:in `start'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/commands/server.rb:65:in `start'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/commands.rb:30
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/commands.rb:27:in `tap'
+/home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.0/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered shiritori/index.html.erb within layouts/application (1.4ms)
+Completed   in 6ms
+
+ActionView::Template::Error (compile error
+/home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:19: syntax error, unexpected kENSURE, expecting $end):
+0  app/views/shiritori/index.html.erb:19:in `compile'
+
+Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.7ms)
+Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.6ms)
+
+
+Started POST "/shiritori" for 127.0.0.1 at Fri Oct 08 20:21:29 +0900 2010
+  Processing by ShiritoriController#index as HTML
+  Parameters: {"commit"=>"回答", "authenticity_token"=>"T4rzZBQeVmLposOMef1Ya5l6ynGHCDU9TToy/KH49lU=", "utf8"=>"✓", "question"=>"as_json", "answer"=>"none"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__612463598_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:11)
+Rendered shiritori/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shiritori" for 127.0.0.1 at Fri Oct 08 20:21:30 +0900 2010
+  Processing by ShiritoriController#index as HTML
+  Parameters: {"commit"=>"回答", "authenticity_token"=>"T4rzZBQeVmLposOMef1Ya5l6ynGHCDU9TToy/KH49lU=", "utf8"=>"✓", "question"=>"as_json", "answer"=>"none"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__612666778_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:11)
+Rendered shiritori/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shiritori" for 127.0.0.1 at Fri Oct 08 20:21:31 +0900 2010
+  Processing by ShiritoriController#index as HTML
+  Parameters: {"commit"=>"回答", "authenticity_token"=>"T4rzZBQeVmLposOMef1Ya5l6ynGHCDU9TToy/KH49lU=", "utf8"=>"✓", "question"=>"as_json", "answer"=>"none"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__612837488_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:11)
+Rendered shiritori/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shiritori" for 127.0.0.1 at Fri Oct 08 20:21:31 +0900 2010
+  Processing by ShiritoriController#index as HTML
+  Parameters: {"commit"=>"回答", "authenticity_token"=>"T4rzZBQeVmLposOMef1Ya5l6ynGHCDU9TToy/KH49lU=", "utf8"=>"✓", "question"=>"as_json", "answer"=>"none"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__613046238_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:11)
+Rendered shiritori/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shiritori" for 127.0.0.1 at Fri Oct 08 20:21:32 +0900 2010
+  Processing by ShiritoriController#index as HTML
+  Parameters: {"commit"=>"回答", "authenticity_token"=>"T4rzZBQeVmLposOMef1Ya5l6ynGHCDU9TToy/KH49lU=", "utf8"=>"✓", "question"=>"as_json", "answer"=>"none"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__613231548_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:11)
+Rendered shiritori/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shiritori" for 127.0.0.1 at Fri Oct 08 20:21:34 +0900 2010
+  Processing by ShiritoriController#index as HTML
+  Parameters: {"commit"=>"回答", "authenticity_token"=>"T4rzZBQeVmLposOMef1Ya5l6ynGHCDU9TToy/KH49lU=", "utf8"=>"✓", "question"=>"as_json", "answer"=>"no"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__613394428_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:11)
+Rendered shiritori/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shiritori" for 127.0.0.1 at Fri Oct 08 20:21:43 +0900 2010
+  Processing by ShiritoriController#index as HTML
+  Parameters: {"commit"=>"回答", "authenticity_token"=>"T4rzZBQeVmLposOMef1Ya5l6ynGHCDU9TToy/KH49lU=", "utf8"=>"✓", "question"=>"as_json", "answer"=>"num"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__613537978_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:11)
+Rendered shiritori/index.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 59ms (Views: 52.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shiritori" for 127.0.0.1 at Fri Oct 08 20:21:45 +0900 2010
+  Processing by ShiritoriController#index as HTML
+  Parameters: {"commit"=>"回答", "authenticity_token"=>"T4rzZBQeVmLposOMef1Ya5l6ynGHCDU9TToy/KH49lU=", "utf8"=>"✓", "question"=>"as_json", "answer"=>"num"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__613691818_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:11)
+Rendered shiritori/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 33ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shiritori" for 127.0.0.1 at Fri Oct 08 20:21:47 +0900 2010
+  Processing by ShiritoriController#index as HTML
+  Parameters: {"commit"=>"回答", "authenticity_token"=>"T4rzZBQeVmLposOMef1Ya5l6ynGHCDU9TToy/KH49lU=", "utf8"=>"✓", "question"=>"as_json", "answer"=>"aaa"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__612483758_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:11)
+Rendered shiritori/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shiritori" for 127.0.0.1 at Fri Oct 08 20:21:48 +0900 2010
+  Processing by ShiritoriController#index as HTML
+  Parameters: {"commit"=>"回答", "authenticity_token"=>"T4rzZBQeVmLposOMef1Ya5l6ynGHCDU9TToy/KH49lU=", "utf8"=>"✓", "question"=>"as_json", "answer"=>"aaa"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__612688768_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:11)
+Rendered shiritori/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shiritori" for 127.0.0.1 at Fri Oct 08 20:21:49 +0900 2010
+  Processing by ShiritoriController#index as HTML
+  Parameters: {"commit"=>"回答", "authenticity_token"=>"T4rzZBQeVmLposOMef1Ya5l6ynGHCDU9TToy/KH49lU=", "utf8"=>"✓", "question"=>"as_json", "answer"=>"aaa"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__612860018_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:11)
+Rendered shiritori/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shiritori" for 127.0.0.1 at Fri Oct 08 20:27:06 +0900 2010
+  Processing by ShiritoriController#index as HTML
+  Parameters: {"commit"=>"回答", "authenticity_token"=>"T4rzZBQeVmLposOMef1Ya5l6ynGHCDU9TToy/KH49lU=", "utf8"=>"✓", "question"=>"as_json", "answer"=>"new"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__613067668_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:11)
+Rendered shiritori/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 29ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shiritori" for 127.0.0.1 at Fri Oct 08 20:27:32 +0900 2010
+  Processing by ShiritoriController#index as HTML
+  Parameters: {"commit"=>"回答", "authenticity_token"=>"T4rzZBQeVmLposOMef1Ya5l6ynGHCDU9TToy/KH49lU=", "utf8"=>"✓", "question"=>"synchronize", "answer"=>"equal"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__613257638_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:11)
+Rendered shiritori/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shiritori" for 127.0.0.1 at Fri Oct 08 20:27:35 +0900 2010
+  Processing by ShiritoriController#index as HTML
+  Parameters: {"commit"=>"回答", "authenticity_token"=>"T4rzZBQeVmLposOMef1Ya5l6ynGHCDU9TToy/KH49lU=", "utf8"=>"✓", "question"=>"synchronize", "answer"=>"equal?"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_shiritori_index_html_erb__659089341__613420428_0 at /home/zizo/mywork/shiritori/app/views/shiritori/index.html.erb:11)
+Rendered shiritori/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 36ms (Views: 33.6ms | ActiveRecord: 0.0ms)
