@@ -1,0 +1,26 @@
+
+
+Started GET "/" for 127.0.0.1 at Fri Oct 08 12:32:51 +0900 2010
+
+AbstractController::ActionNotFound (The action 'index' could not be found for TopController):
+  
+
+Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Oct 08 12:33:30 +0900 2010
+  Processing by TopController#index as HTML
+Completed   in 0ms
+
+RuntimeError (hoge):
+  app/controllers/top_controller.rb:4:in `index'
+
+Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered /home/zizo/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Oct 08 12:34:26 +0900 2010
+  Processing by TopController#index as HTML
+Rendered top/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 7ms (Views: 7.1ms | ActiveRecord: 0.0ms)
