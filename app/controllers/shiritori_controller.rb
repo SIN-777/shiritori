@@ -1,19 +1,19 @@
 class ShiritoriController < ApplicationController
 
-  def all_methods
-    Object.methods
+  def get_new_question
+    RubyMethod.find(:all).sort_by{|m| rand}.first
   end
 
-  def get_next_question
-    all_methods.sort_by{|m| rand}.first
+  def get_next_question(answer)
+    RubyMethod.find_all_by_initial(answer[answer.length - 1, 1]).sort_by{|m| rand}.first
   end
 
-  def check_question(question, answer)
-    if question[question.length - 1, 1] != answer[0, 1]
+  def check_answer(question, answer)
+    if question.terminal != answer[0, 1]
       flash[:ng_message] = "しりとりがつながりません"
       return
     end
-    unless all_methods.index(answer)
+    unless RubyMethod.find_by_name(answer)
       flash[:ng_message] = "そんなメソッドありません"
       return
     end
@@ -23,14 +23,15 @@ class ShiritoriController < ApplicationController
 public
 
   def index
-    if request[:question] && request[:answer]
-      if check_question(params[:question], params[:answer])
-        @question = get_next_question
+    if request[:question_id] && request[:answer]
+      before_question = RubyMethod.find(request[:question_id])
+      if check_answer(before_question, params[:answer])
+        @question = get_next_question(params[:answer])
       else
-        @question = params[:question]
+        @question = before_question
       end
     else
-      @question = get_next_question
+      @question = get_new_question
     end
   end
 

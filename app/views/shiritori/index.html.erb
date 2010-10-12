@@ -3,14 +3,14 @@
 <% end %>
 
 <% if @question %>
-  問題：<%= @question %>
+  問題：<%= @question.name %>
   <hr />
 <% end %>
 
 
 <% form_tag :action => :index do %>
   <%= text_field_tag :answer, params[:answer] %><br />
-  <%= hidden_field_tag :question, @question if @question %><br />
+  <%= hidden_field_tag :question_id, @question.id %><br />
   <%= submit_tag "回答" %>
 <% end %>
 

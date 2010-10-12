@@ -33,13 +33,16 @@ ActiveRecord::Schema.define(:version => 20101012031850) do
 
   create_table "ruby_methods", :force => true do |t|
     t.string   "name"
-    t.string   "body"
+    t.string   "initial"
+    t.string   "terminal"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "deleted_at"
   end
 
-  add_index "ruby_methods", ["body"], :name => "index_ruby_methods_on_body"
   add_index "ruby_methods", ["deleted_at"], :name => "index_ruby_methods_on_deleted_at"
+  add_index "ruby_methods", ["initial"], :name => "index_ruby_methods_on_initial"
+  add_index "ruby_methods", ["name"], :name => "index_ruby_methods_on_name"
+  add_index "ruby_methods", ["terminal"], :name => "index_ruby_methods_on_terminal"
 
 end
