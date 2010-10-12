@@ -2,6 +2,7 @@ class CreateRubyMethods < ActiveRecord::Migration
   def self.up
     create_table :ruby_methods do |t|
       t.string :name
+      t.string :body
       t.string :initial
       t.string :terminal
       t.timestamps

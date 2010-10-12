@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(:version => 20101012031850) do
 
   create_table "ruby_methods", :force => true do |t|
     t.string   "name"
+    t.string   "body"
     t.string   "initial"
     t.string   "terminal"
     t.datetime "created_at"

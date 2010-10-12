@@ -1,7 +1,7 @@
 class ShiritoriController < ApplicationController
 
   def get_new_question
-    RubyMethod.find(:all).sort_by{|m| rand}.first
+    RubyMethod.all.sort_by{|m| rand}.first
   end
 
   def get_next_question(answer)
