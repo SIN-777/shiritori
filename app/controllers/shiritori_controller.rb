@@ -17,6 +17,7 @@ class ShiritoriController < ApplicationController
       flash[:ng_message] = "そんなメソッドありません"
       return
     end
+    flash[:ng_message] = nil
     true
   end
 
