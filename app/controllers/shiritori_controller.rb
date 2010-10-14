@@ -5,9 +5,12 @@ class ShiritoriController < ApplicationController
       flash[:ng_message] = "しりとりがつながりません"
       return
     end
-    unless RubyMethod.find_by_name(answer)
+    answer_method = RubyMethod.find_by_name(answer)
+    if answer_method.nil?
       flash[:ng_message] = "そんなメソッドありません"
       return
+    else
+      session[:history].push answer_method.id
     end
     flash[:ng_message] = nil
     true
@@ -20,11 +23,13 @@ public
       before_question = RubyMethod.find(request[:question_id])
       if check_answer(before_question, params[:answer])
         @question = RubyMethod.get_next_question(params[:answer])
+        session[:history].push @question.id 
       else
         @question = before_question
       end
     else
       @question = RubyMethod.get_random
+      session[:history] = [@question.id]
     end
   end
 

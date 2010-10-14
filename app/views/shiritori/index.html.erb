@@ -12,4 +12,8 @@
   <%= submit_tag "回答" %>
 <% end %>
 
-
+<% if session[:history] %>
+  <hr />
+  history:<br />
+  <%= session[:history].map{|id| RubyMethod.find(id).name }.join("→") %>
+<% end %>
