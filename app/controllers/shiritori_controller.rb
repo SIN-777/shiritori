@@ -7,7 +7,10 @@ class ShiritoriController < ApplicationController
     end
     answer_method = RubyMethod.find_by_name(answer)
     if answer_method.nil?
-      flash[:ng_message] = "そんなメソッドありません"
+      flash[:ng_message] = "#{answer}というメソッドはありません"
+      return
+    elsif session[:history].index(answer_method.id)
+      flash[:ng_message] = "#{answer}は既に使いました"
       return
     else
       session[:history].push answer_method.id
