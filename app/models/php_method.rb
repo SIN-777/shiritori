@@ -1,2 +1,2 @@
-class PhpMethod < ActiveRecord::Base
+class PhpMethod < AbstractMethod
 end
