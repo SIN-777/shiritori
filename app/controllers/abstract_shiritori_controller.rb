@@ -1,4 +1,4 @@
-class ShiritoriController < ApplicationController
+class AbstractShiritoriController < ApplicationController
 
   before_filter :set_method_model
 

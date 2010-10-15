@@ -11,4 +11,8 @@ public
     self.find_all_by_initial(answer[answer.length - 1, 1]).sort_by{|m| rand}.first
   end
 
+  def terminal
+    body[body.length - 1 , 1]
+  end
+
 end
