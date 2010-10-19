@@ -15,5 +15,5 @@
 <% if session[:history] %>
   <hr />
   history:<br />
-  <%= session[:history].map{|id| @method_model.find(id).name }.join("→") %>
+  <%= session[:history].map{|id| @language.language_methods.find(id).name }.join("→") %>
 <% end %>
