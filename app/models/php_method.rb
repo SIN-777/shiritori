@@ -1,2 +1,0 @@
-class PhpMethod < AbstractMethod
-end

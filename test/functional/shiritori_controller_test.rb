@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class PhpMethodTest < ActiveSupport::TestCase
+class ShiritoriControllerTest < ActionController::TestCase
   # Replace this with your real tests.
   test "the truth" do
     assert true
