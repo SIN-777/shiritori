@@ -1,3 +1,15 @@
+# == Schema Information
+# Schema version: 20101020132438
+#
+# Table name: language_habtm_language_methods
+#
+#  id                 :integer         not null, primary key
+#  language_id        :integer         not null
+#  language_method_id :integer         not null
+#  created_at         :datetime
+#  updated_at         :datetime
+#
+
 data1:
   id: 1
   language_id: 1
