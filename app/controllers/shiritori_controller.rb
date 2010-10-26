@@ -32,8 +32,13 @@ public
     if request[:question_id] && request[:answer]
       before_question = @language.language_methods.find(request[:question_id])
       if check_answer(before_question, params[:answer])
-        @question = @language.get_next_question(params[:answer])
-        session[:history].push @question.id 
+        next_question = @language.get_next_question(params[:answer])
+        if next_question.nil?
+          render :action => :giveup
+        else
+          @question = next_question
+          session[:history].push @question.id
+        end
       else
         @question = before_question
       end
