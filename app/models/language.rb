@@ -1,5 +1,6 @@
 class Language < ActiveRecord::Base
-  has_many :language_methods
+  has_many :language_habtm_language_methods
+  has_many :language_methods, :through => :language_habtm_language_methods, :uniq => true
 
   def get_random
     language_methods.sort_by{|m| rand}.first

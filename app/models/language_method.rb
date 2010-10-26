@@ -1,5 +1,6 @@
 class LanguageMethod < ActiveRecord::Base
-  belongs_to :language
+  has_many :language_habtm_language_methods
+  has_many :languages, :through => :language_habtm_language_methods, :uniq => true
 
 public
   def terminal
