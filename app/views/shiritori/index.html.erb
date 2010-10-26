@@ -7,7 +7,7 @@
 <% end %>
 
 <% form_tag :action => :index do %>
-  <%= text_field_tag :answer, "", :autofocus => "autofocus" %><br />
+  <%= text_field_tag :answer, "", :autofocus => "autofocus", :autocomplete => "off" %><br />
   <%= hidden_field_tag :question_id, @question.id %><br />
   <%= submit_tag "回答" %>
 <% end %>
