@@ -29,10 +29,11 @@ class ShiritoriController < ApplicationController
 public
 
   def index
-    if request[:question_id] && request[:answer]
-      before_question = @language.language_methods.find(request[:question_id])
-      if check_answer(before_question, params[:answer])
-        next_question = @language.get_next_question(params[:answer])
+    answer = request[:answer]
+    if answer && answer[:question_id] && answer[:value]
+      before_question = @language.language_methods.find(answer[:question_id])
+      if check_answer(before_question, answer[:value])
+        next_question = @language.get_next_question(answer[:value])
         if next_question.nil?
           render :action => :giveup
         else

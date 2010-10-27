@@ -6,9 +6,9 @@
   <div style="color:#FF0000"><%= flash[:ng_message] %></div>
 <% end %>
 
-<% form_tag :action => :index do %>
-  <%= text_field_tag :answer, "", :autofocus => "autofocus", :autocomplete => "off" %><br />
-  <%= hidden_field_tag :question_id, @question.id %><br />
+<%= form_for :answer, :url => {:action => :index}, :remote => false do |f| %>
+  <%= f.text_field :value, :value => "", :autofocus => "autofocus", :autocomplete => "off" %><br />
+  <%= f.hidden_field :question_id, :value => @question.id %><br />
   <%= submit_tag "回答" %>
 <% end %>
 
