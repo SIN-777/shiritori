@@ -29,23 +29,24 @@ class ShiritoriController < ApplicationController
 public
 
   def index
+    @question = @language.get_random
+    session[:history] = [@question.id]
+  end
+
+  def answer
     answer = request[:answer]
-    if answer && answer[:question_id] && answer[:value]
-      before_question = @language.language_methods.find(answer[:question_id])
-      if check_answer(before_question, answer[:value])
-        next_question = @language.get_next_question(answer[:value])
-        if next_question.nil?
-          render :action => :giveup
-        else
-          @question = next_question
-          session[:history].push @question.id
-        end
+    before_question = @language.language_methods.find(answer[:question_id])
+    if check_answer(before_question, answer[:value])
+      next_question = @language.get_next_question(answer[:value])
+      if next_question.nil?
+        render :action => :giveup
       else
-        @question = before_question
+        @question = next_question
+        session[:history].push @question.id
       end
     else
-      @question = @language.get_random
-      session[:history] = [@question.id]
+      @question = before_question
     end
   end
+
 end
